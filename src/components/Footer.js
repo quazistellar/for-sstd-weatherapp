@@ -12,7 +12,7 @@ const Footer = () => {
     const fetchCurrentWeather = async () => {
       try {
         //  запросы к API для каждого города
-      const response = await Promise.all(
+          const response = await Promise.all(
           cities.map((city) => axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`))
         );
 
@@ -32,7 +32,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <p className="headfot"> _______ M a i n ______ C i t i e s _______</p>
+      <p className="headfot"> M a i n _____ C i t i e s </p>
       <ul>
         {cities.map((city, index) => (
         <li key={city}>
